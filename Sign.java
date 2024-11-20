@@ -1,12 +1,14 @@
 public class Sign
 {
-    String result = "";
-    public Sign(String message, int width)
+    private String message;
+    private int width;
+    public Sign(String m, int w)
     {
-        for(int i = 0; i < width; i++)
-        {
-            result += message.substring(i, i++);
-        }
-        
+        message = m;
+        width = w;
+    }
+    public int numberOfLines()
+    {
+        return message.length() / width + 1;
     }
 }
